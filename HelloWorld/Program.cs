@@ -8,14 +8,15 @@ namespace HelloWorld
         {
             //Parsing a string to intager
 
-            string myString = "15";
-            string MySecondString = "13";
-            int num1 = Int32.Parse(myString);
-            int num2 = Int32.Parse(MySecondString);
-            int resultInt = num1 + num2;
-            string result = myString + MySecondString; 
 
-            Console.WriteLine(resultInt);
+            string stringForFloat = "0.85"; // datatype should be float
+            string stringForInt = "12345"; // datatype should be int
+
+            float stringToFloat = float.Parse(stringForFloat);
+            int stringToInt = int.Parse(stringForInt);
+
+
+            Console.WriteLine(stringForInt);
             Console.Read();
 
         }
