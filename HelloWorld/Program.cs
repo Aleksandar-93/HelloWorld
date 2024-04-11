@@ -6,7 +6,14 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //Inplicit and explicit Conversion
+            //Implicit and explicit Conversion
+
+            // Implicit Conversion
+            int num = 12390532;
+            long bigNum = num;
+
+            float myFloat = 13.37;
+            dobule myNewDouble = myFloat;
 
 
             //explicit Conversion
