@@ -12,8 +12,8 @@ namespace HelloWorld
             int num = 12390532;
             long bigNum = num;
 
-            float myFloat = 13.37;
-            dobule myNewDouble = myFloat;
+            float myFloat = 13.37f;
+            double myNewDouble = myFloat;
 
 
             //explicit Conversion
@@ -21,6 +21,10 @@ namespace HelloWorld
             int myInt;
             //cast double to int 
             myInt = (int)myDouble; 
+
+            //typeConversion 
+            string myString = myDouble.ToString(); //"13.37"
+
             Console.WriteLine(myInt);
             Console.Read();
         }
