@@ -6,13 +6,15 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //STRING
-            string myname = "Denis";
-            string message = "my name is " + myname;
-            string capsMessage = message.ToUpper();
-            string lowerMessage = message.ToLower();
-            Console.WriteLine(capsMessage);
-            Console.WriteLine(lowerMessage);
+            //Inplicit and explicit Conversion
+
+
+            //explicit Conversion
+            double myDouble = 13.37;
+            int myInt;
+            //cast double to int 
+            myInt = (int)myDouble; 
+            Console.WriteLine(myInt);
             Console.Read();
         }
     }
