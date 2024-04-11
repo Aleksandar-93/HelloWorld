@@ -24,8 +24,12 @@ namespace HelloWorld
 
             //typeConversion 
             string myString = myDouble.ToString(); //"13.37"
+            string myFloatString = myFloat.ToString();
+            bool sunIsShining = false;
 
-            Console.WriteLine(myInt);
+            string myBooulString = sunIsShining.ToString();
+
+            Console.WriteLine(myBooulString);
             Console.Read();
         }
     }
