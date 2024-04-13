@@ -8,20 +8,30 @@ namespace StringPratice
         {
             //String pratice
 
-            string myName;
-            Console.Write("Please enter your name and press enter : "); //same line 
-            myName = Console.ReadLine(); // ask for input 
-            string myNameUpperCase = String.Format("Upper case :{0}", myName.ToUpper());
-            string myNameLowerCase = String.Format("Lower case :{0}", myName.ToLower()); 
-            string myNameTrimed = String.Format("Trimed value case :{0}", myName.Trim()); // Remove empty spaces beffore and affter string
-            string myNameSubstring = String.Format("Substring value :{0}", myName.Substring(0,5));   // start at 0 lenght of 5
+            Console.Write("Enter the string here: ");
+            //Read first input string.
+            string input = Console.ReadLine();
 
-            Console.WriteLine(myNameUpperCase);
-            Console.WriteLine(myNameLowerCase);
-            Console.WriteLine(myNameTrimed);
-            Console.WriteLine(myNameSubstring);
+            Console.Write("Enter the Character to search: ");
+            //return first character of input
+            char searchInput = Console.ReadLine()[0];
+            //Get the index of the character from string
+            int searchIndex = input.IndexOf(searchInput);
+            Console.WriteLine("Index of Character {0} in string is {1}", searchIndex,searchInput);
 
+            Console.Write("Enter first name: ");
+            //Read first name
+            string firstName = Console.ReadLine();
+            Console.Write("Enter last name: ");
+            //Read last name 
+            string lastName = Console.ReadLine();
 
+            //Concatinate first name and last
+            string fullName = string.Concat(firstName," ",lastName);
+            // print full name
+            Console.WriteLine("Your full name is {0} ",fullName);
+
+            Console.ReadKey();
         }
     }
 }
