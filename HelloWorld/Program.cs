@@ -6,32 +6,36 @@ namespace StringPratice
     {
         static void Main(string[] args)
         {
-            //String pratice
+            //data types pratice
 
-            Console.Write("Enter the string here: ");
-            //Read first input string.
-            string input = Console.ReadLine();
+            byte myByte = 25; // 0 to 255
+            Console.WriteLine(myByte);
+            sbyte mySbyte = -15;// -128 to 127
+            Console.WriteLine(mySbyte);
+            int myInt = -12318925; // -2,147,483,648 to 2,147,483,647
+            Console.WriteLine(myInt);
+            uint myUint = 123091; // 0 to 4294967295
+            Console.WriteLine(myUint);
+            short myShort = -32768; // -32,768 to 32,767
+            Console.WriteLine(myShort);
+            ushort myUShort = 65535; // 0 to 65535
+            Console.WriteLine(myUShort);
+            float myFloat = -31.1289f; // -3.402823e38 to 3.402823e38
+            Console.WriteLine(myFloat);
+            double myDouble = -12.1231250; //-1.79769313486232e308 to 1.79769313486232e308
+            Console.WriteLine(myDouble);
+            char myCharacter = 'A'; //Unicode symbols used in text
+            Console.WriteLine(myCharacter);
+            bool myBool = true; // True or false
+            Console.WriteLine(myBool);
+            string myText = "I control text";  //A sequence of characters
+            Console.WriteLine(myText);
+            string numText = "15";
 
-            Console.Write("Enter the Character to search: ");
-            //return first character of input
-            char searchInput = Console.ReadLine()[0];
-            //Get the index of the character from string
-            int searchIndex = input.IndexOf(searchInput);
-            Console.WriteLine("Index of Character {0} in string is {1}", searchIndex,searchInput);
+            int myNumFromText = int.Parse(numText);
+            Console.WriteLine(myNumFromText);
+            Console.ReadLine();
 
-            Console.Write("Enter first name: ");
-            //Read first name
-            string firstName = Console.ReadLine();
-            Console.Write("Enter last name: ");
-            //Read last name 
-            string lastName = Console.ReadLine();
-
-            //Concatinate first name and last
-            string fullName = string.Concat(firstName," ",lastName);
-            // print full name
-            Console.WriteLine("Your full name is {0} ",fullName);
-
-            Console.ReadKey();
         }
     }
 }
