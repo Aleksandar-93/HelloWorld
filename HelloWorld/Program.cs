@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace IfCondition
+namespace IfElse
 {
     class Program
     {
@@ -15,17 +15,18 @@ namespace IfCondition
             if(temp < 20)
             {
                 Console.WriteLine("take the coat");
-            }
 
-            if (temp == 20)
+            }else if(temp == 20)
             {
                 Console.WriteLine("Pants and pull over shold be fine");
             }
-
-            if (temp > 20)
+            else
             {
                 Console.WriteLine(" Shorts are enough tiday ");
+
             }
+
+           
         }
 
        
