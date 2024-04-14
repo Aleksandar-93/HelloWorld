@@ -2,31 +2,29 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Parametars
+namespace Challenge
 {
     class Program
     {
-        //Return Value And Parametars
         static void Main(string[] args)
         {
-            //Add(Add(1,2),Add(3,4)); 
-            Console.WriteLine(Devide(25,13));
+            string friend1 = "Nikola";
+            string friend2 = "Pera";
+            string friend3 = "Vlada";
+
+            GreatFriend(friend1);
+            GreatFriend(friend2);
+            GreatFriend(friend3);
+
             Console.Read();
         }
-        public static int Add(int num1, int num2)
+
+        
+        public static void GreatFriend(string friendName)
         {
-            return num1 + num2; 
+            Console.WriteLine("Hi " +  friendName + " , my friend!");
         }
 
-        public static int Multiply(int num1, int num2)
-        {
-            return num1 * num2;
-        }
-
-        public static double Devide(double num1, double num2)
-        {
-            return num1 / num2;
-        }
 
     }
 }
