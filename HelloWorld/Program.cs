@@ -2,31 +2,25 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace IfElse
+namespace TryParse
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What's the temperature like?");
-            string temperature = Console.ReadLine();
-            int temp = int.Parse(temperature);
+            string numAsString = Console.ReadLine();
+            int parsedVal;
+            bool success = int.TryParse(numAsString, out parsedVal);
 
-            if(temp < 20)
+            if(success )
             {
-                Console.WriteLine("take the coat");
-
-            }else if(temp == 20)
-            {
-                Console.WriteLine("Pants and pull over shold be fine");
+                Console.WriteLine("Parsing Succsedsful - number is : " + parsedVal);
             }
             else
             {
-                Console.WriteLine(" Shorts are enough tiday ");
-
+                Console.WriteLine("parsing failed");
             }
 
-           
         }
 
        
