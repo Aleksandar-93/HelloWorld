@@ -13,8 +13,9 @@ namespace TryParse
             string temperature = Console.ReadLine();
             int numTemp;
             int number;
+            bool userEnteredANumber = int.TryParse(temperature, out number);
 
-            if(int.TryParse(temperature, out number))
+            if (userEnteredANumber)
             {
                 numTemp = number;
             }
