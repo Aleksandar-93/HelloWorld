@@ -1,25 +1,32 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace functionMethods
+namespace Parametars
 {
     class Program
     {
+        //Return Value And Parametars
         static void Main(string[] args)
         {
-            WriteSomting();
-            WriteSomtingSpecific("I am a argument and i am called from a method");
-            Console.ReadLine();
-            
+            //Add(Add(1,2),Add(3,4)); 
+            Console.WriteLine(Devide(25,13));
+            Console.Read();
+        }
+        public static int Add(int num1, int num2)
+        {
+            return num1 + num2; 
         }
 
-        public static void WriteSomting()
+        public static int Multiply(int num1, int num2)
         {
-            Console.WriteLine("I am called from a method");
+            return num1 * num2;
         }
-        public static void WriteSomtingSpecific(string myText)
+
+        public static double Devide(double num1, double num2)
         {
-            Console.WriteLine(myText);
+            return num1 / num2;
         }
+
     }
 }
