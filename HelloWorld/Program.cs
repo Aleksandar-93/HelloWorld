@@ -8,19 +8,39 @@ namespace TryParse
     {
         static void Main(string[] args)
         {
-            string numAsString = Console.ReadLine();
-            int parsedVal;
-            bool success = int.TryParse(numAsString, out parsedVal);
 
-            if(success )
+            Console.WriteLine("What's the temperature like?");
+            string temperature = Console.ReadLine();
+            int numTemp;
+            int number;
+
+            if(int.TryParse(temperature, out number))
             {
-                Console.WriteLine("Parsing Succsedsful - number is : " + parsedVal);
+                numTemp = number;
             }
             else
             {
-                Console.WriteLine("parsing failed");
+                numTemp = 0;
+                Console.WriteLine("Value entered, was no number, 0 set as temperature");
             }
 
+
+            if (numTemp < 20)
+            {
+                Console.WriteLine("Take the coat");
+            }
+
+            if (numTemp == 20)
+            {
+                Console.WriteLine("Pants and Pull Over should be fine");
+            }
+
+            if (numTemp > 20)
+            {
+                Console.WriteLine("Shorts are enough today");
+            }
+
+            Console.Read();
         }
 
        
