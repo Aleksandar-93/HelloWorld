@@ -2,53 +2,73 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace TryCatch
+namespace OperatorsC
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Please enter a number!");
-            string userInput = Console.ReadLine();
-
             int num1 = 5;
-            int num2 = 0;
+            int num2 = 3;
+            int num3;
+
+            // unary operators
+            num3 = -num1; // multiply num1 wihh -1
+            Console.WriteLine("num3 is {0}", num3);
+
+            bool isSunny = true;
+            Console.WriteLine("is it sunny? {0}",!isSunny);
+
+            // icremaemant operators
+
+            int num = 0;
+            num++;
+            Console.WriteLine("num is {0}", num);  //1
+            Console.WriteLine("num is {0}", num++);  //1
+            /// pre increment
+            Console.WriteLine("num is {0}", ++num); //3
+
+            // decrement operators
+            num--;
+            Console.WriteLine("num is {0}", num);  //2
+            Console.WriteLine("num is {0}", num--);  //2
+            /// pre increment
+            Console.WriteLine("num is {0}", --num); //0
+
+
             int result;
+            result = num1 + num2;
+            Console.WriteLine("result of num1 + num2 is {0}", result);
+            result = num1 - num2;
+            Console.WriteLine("result of num1 - num2 is {0}", result);
+            result = num1 / num2;
+            Console.WriteLine("result of num1 / num2 is {0}", result);
+            result = num1 * num2;
+            Console.WriteLine("result of num1 * num2 is {0}", result);
+            result = num1 % num2;
+            Console.WriteLine("result of num1 % num2 is {0}", result);
 
-           
-          
-            try
-            {
-               result = num1 / num2;
+            // relational and type operaors 
+            bool isLower;
+            isLower = num1 < num2;
+            Console.WriteLine("result of num1 < num2 is {0}", isLower);
 
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("cant devide by Zeroo!");
-            }
+            // equality operaotrs
+            bool isEqual;
+            isEqual = num1 == num2;
+            Console.WriteLine("result of num1 == num2 is {0}",isEqual);
+            isEqual = num1 != num2;
+            Console.WriteLine("result of num1 != num2 is {0}", isEqual);
 
+            // conditional operators
 
-
-
-            try
-            {
-                int userInputAsInt = int.Parse(userInput);
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Format expection, please neter corect type next time.");
-            }
-            catch (OverflowException)
-            {
-                Console.WriteLine("Overflow Exception, the number ws to long or to shgort for int32.");
-            }
-            finally
-            {
-                Console.WriteLine("Thiss is called anyweys!");
-            } 
-
-
+            bool isLowerAndSunny;
+            // Condition1 AND condition 2
+            isLowerAndSunny = isLower && isSunny;
+            Console.WriteLine("result of isLowerAndSunny is {0}", isLowerAndSunny);
+            // Condition1 OR condition 2
+            isLowerAndSunny = isLower || isSunny;
+            Console.WriteLine("result of isLowerAndSunny is {0}", isLowerAndSunny);
 
             Console.ReadKey();
         }
