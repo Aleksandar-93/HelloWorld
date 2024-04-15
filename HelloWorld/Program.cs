@@ -3,61 +3,36 @@ using System.ComponentModel;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
-namespace SwitchCase
+namespace IfStatmentsChalange
 {
-    class Program { 
+    class Program {
 
+        static int highScore = 300;
+        static string highScorePlayer = "Denis";
 
         static void Main(string[] args)
         {
-            int age = 25;
-
-            switch (age)
-            {
-                case 15:
-                    Console.WriteLine("To yoing to party in the club!");
-                    break;
-                case 25:
-                    Console.WriteLine("Good to go!");
-                    break;
-                 default:
-                    Console.WriteLine("how old are you then?");
-                 break;
-            }
-
-            if (age == 15)
-            {
-                Console.WriteLine("To yoing to party in the club!");
-            }else if (age == 25)
-            {
-                Console.WriteLine("Good to go!");
-            }
-            else
-            {
-                Console.WriteLine("how old are you then?");
-            }
-
-            // strings
-
-            string userName = "Denis";
-
-            switch(userName) 
-            {
-                case "Dneis":
-                    Console.WriteLine("username is Denis");
-                    break;
-                case "Root":
-                    Console.WriteLine("username is Root");
-                    break;
-                default:
-                    Console.WriteLine("Username is unknown");
-                    break;
-            }
-
+            CheckHighScore(250, "Maria");
+            CheckHighScore(315, "Michel");
+            CheckHighScore(350, "Denis");
+            CheckHighScore(270, "Alex");
 
         }
 
-      
+        public static void CheckHighScore(int score, string playerName)
+        {
+            if (score > highScore )
+            {
+                highScore = score;
+                highScorePlayer = playerName;
+                Console.WriteLine("New higscore is " + score);
+                Console.WriteLine("It is now held by " + playerName);
+            }
+            else
+            {
+                Console.WriteLine("The old highscore culd not be broke. it is still " + highScore + " and heald by " + highScorePlayer);
+            }
+        }
 
 
     }
