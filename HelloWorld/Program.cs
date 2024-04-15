@@ -3,51 +3,61 @@ using System.ComponentModel;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
-namespace RegisteringAndLogginIn
+namespace SwitchCase
 {
     class Program { 
 
-        static string username;
-        static string password;
 
         static void Main(string[] args)
         {
-            Register();
-            login();
-            Console.Read();
-        }
+            int age = 25;
 
-       public static void Register()
-        {
-            Console.WriteLine("please enter your username");
-            username = Console.ReadLine();
-            Console.WriteLine("please enter your password");
-            password = Console.ReadLine();
-            Console.WriteLine("Registration complited");
-            Console.WriteLine("-------------------------------------------");
-
-        }
-
-        public static void login()
-        {
-            Console.WriteLine("please enter your username");
-            if(username == Console.ReadLine())
+            switch (age)
             {
-                Console.WriteLine("please enter your password");
-                if(password == Console.ReadLine())
-                {
-                    Console.WriteLine("Login Succseflul");
-                }
-                else
-                {
-                    Console.WriteLine("Login failed, wrong password. Restart Program");
-                }
+                case 15:
+                    Console.WriteLine("To yoing to party in the club!");
+                    break;
+                case 25:
+                    Console.WriteLine("Good to go!");
+                    break;
+                 default:
+                    Console.WriteLine("how old are you then?");
+                 break;
+            }
+
+            if (age == 15)
+            {
+                Console.WriteLine("To yoing to party in the club!");
+            }else if (age == 25)
+            {
+                Console.WriteLine("Good to go!");
             }
             else
             {
-                Console.WriteLine("Login failed, wrong password. Restart Program");
+                Console.WriteLine("how old are you then?");
             }
+
+            // strings
+
+            string userName = "Denis";
+
+            switch(userName) 
+            {
+                case "Dneis":
+                    Console.WriteLine("username is Denis");
+                    break;
+                case "Root":
+                    Console.WriteLine("username is Root");
+                    break;
+                default:
+                    Console.WriteLine("Username is unknown");
+                    break;
+            }
+
+
         }
+
+      
 
 
     }
