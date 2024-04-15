@@ -2,46 +2,33 @@
 using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
-namespace TryParse
+namespace ifPratice
 {
     class Program
     {
         static void Main(string[] args)
         {
+            bool isAdmin = false;
+            bool isRegistered = true;
+            string userName = "";
+            Console.WriteLine("Please enter your user name");
+            userName = Console.ReadLine();
 
-            Console.WriteLine("What's the temperature like?");
-            string temperature = Console.ReadLine();
-            int numTemp;
-            int number;
-            bool userEnteredANumber = int.TryParse(temperature, out number);
-
-            if (userEnteredANumber)
+            if (isRegistered && userName != "" && userName.Equals("admin"))
             {
-                numTemp = number;
-            }
-            else
-            {
-                numTemp = 0;
-                Console.WriteLine("Value entered, was no number, 0 set as temperature");
+                Console.WriteLine("Hi there, registred user");
+                Console.WriteLine("Hi there " + userName);
+                Console.WriteLine("Hi there, Admin");
+                
             }
 
-
-            if (numTemp < 20)
+            if(isAdmin || isRegistered)
             {
-                Console.WriteLine("Take the coat");
-            }
-
-            if (numTemp == 20)
-            {
-                Console.WriteLine("Pants and Pull Over should be fine");
-            }
-
-            if (numTemp > 20)
-            {
-                Console.WriteLine("Shorts are enough today");
+                Console.WriteLine("You are loged in");
             }
 
             Console.Read();
+            
         }
 
        
