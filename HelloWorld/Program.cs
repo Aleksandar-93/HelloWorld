@@ -4,25 +4,25 @@ using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Channels;
 
-namespace Enhanced_If_Statements
+namespace DoWhile
 {
     class Program {
 
         
         static void Main(string[] args)
         {
-            for(int counter = 0; counter < 50;  counter+=5) // add 5 evry time 
+            int lenghtOfText = 0;
+            string wholeText = " ";
+            do
             {
-                Console.WriteLine(counter);
-            }
-            Console.WriteLine("for loop is done");
+                Console.WriteLine("Please enter the name of friend");
+                string nameOfAFriend = Console.ReadLine();
+                int currentLenght = nameOfAFriend.Length;
+                lenghtOfText += currentLenght;
+                wholeText += nameOfAFriend;
+            } while (lenghtOfText < 20);
+                Console.WriteLine("Thenks, that was enough! " + wholeText);
 
-            // print odd numbers
-            Console.WriteLine("odd numbers");
-            for(int counter = 0; counter <20; counter+=2)
-            {
-                Console.WriteLine(counter);
-            }
 
 
 
