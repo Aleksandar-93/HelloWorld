@@ -10,40 +10,27 @@ namespace Enhanced_If_Statements
         
         static void Main(string[] args)
         {
-            //[condition] ? [first expression] : [second expression]
-            //condition has to be either true or false
+            int inputTemperature = 0;
+            string temperatureMessaage = string.Empty; 
+            string inputValue = string.Empty;
 
-            //The conditional Operator is right-associative
-            //That means, that a ? b : c ? d : e
-            // is evaluated as a ? b : (c ? d : e)
+            // take input form console
+            Console.WriteLine("enter the current tempeture : ");
+            inputValue = Console.ReadLine();
 
-            //The conditional Operator cannot be overloaded.
+            //validete the input as valid input integer value 
+            bool validInteger = int.TryParse(inputValue, out inputTemperature); 
 
-
-            int temperature = -5;
-            string stateOfMatter;
-
-            if (temperature < 0)
-                stateOfMatter = "solid";
+            if (validInteger)
+            {
+                //check for the condition
+                temperatureMessaage = inputTemperature <= 15 ? "it is to cold here" : (inputTemperature >= 16 && inputTemperature <= 28) ? "it is cold here" : inputTemperature > 28 ? "it is hot here" : " ";
+                Console.WriteLine(temperatureMessaage);
+            }
             else
-                stateOfMatter = "liquid";
-                Console.WriteLine("State of mater is {0}",stateOfMatter);
-
-
-            // in short
-
-            stateOfMatter = temperature < 0 ? "solid" : "liquid";
-
-            // gass state of matter 
-            temperature += 100;
-            stateOfMatter = temperature > 100 ? "gas" : temperature < 0 ? "solid" : "liquid";
-
-            Console.WriteLine("State of mater is {0}", stateOfMatter);
-            Console.ReadKey();
-
-            temperature += 30;
-
-
+            {
+                Console.WriteLine("Not a valid temperature");
+            }
 
         }
 
