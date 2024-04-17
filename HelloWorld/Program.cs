@@ -4,23 +4,23 @@ using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Channels;
 
-namespace While
+namespace BrakeContinu
 {
     class Program {
 
         
         static void Main(string[] args)
         {
-            int counter = 0;
-            string enteredText = "";
-            while (enteredText.Equals(""))
+            for(int i = 0; i < 10;  i++)
             {
-                Console.WriteLine("please Press enter");
-                enteredText = Console.ReadLine();
-                counter++;
-                Console.WriteLine("Current people count is {0}", counter);
-            }
+                if(i %2 == 0)
+                {
+                    Console.WriteLine("Now comes an odd number");
+                    continue;
+                }
+                Console.WriteLine(i);
 
+            }
 
 
             Console.Read();
