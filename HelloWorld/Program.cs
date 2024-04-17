@@ -3,35 +3,48 @@ using System.ComponentModel;
 using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
-namespace IfStatmentsChalange
+namespace Enhanced_If_Statements
 {
     class Program {
 
-        static int highScore = 300;
-        static string highScorePlayer = "Denis";
-
+        
         static void Main(string[] args)
         {
-            CheckHighScore(250, "Maria");
-            CheckHighScore(315, "Michel");
-            CheckHighScore(350, "Denis");
-            CheckHighScore(270, "Alex");
+            //[condition] ? [first expression] : [second expression]
+            //condition has to be either true or false
 
-        }
+            //The conditional Operator is right-associative
+            //That means, that a ? b : c ? d : e
+            // is evaluated as a ? b : (c ? d : e)
 
-        public static void CheckHighScore(int score, string playerName)
-        {
-            if (score > highScore )
-            {
-                highScore = score;
-                highScorePlayer = playerName;
-                Console.WriteLine("New higscore is " + score);
-                Console.WriteLine("It is now held by " + playerName);
-            }
+            //The conditional Operator cannot be overloaded.
+
+
+            int temperature = -5;
+            string stateOfMatter;
+
+            if (temperature < 0)
+                stateOfMatter = "solid";
             else
-            {
-                Console.WriteLine("The old highscore culd not be broke. it is still " + highScore + " and heald by " + highScorePlayer);
-            }
+                stateOfMatter = "liquid";
+                Console.WriteLine("State of mater is {0}",stateOfMatter);
+
+
+            // in short
+
+            stateOfMatter = temperature < 0 ? "solid" : "liquid";
+
+            // gass state of matter 
+            temperature += 100;
+            stateOfMatter = temperature > 100 ? "gas" : temperature < 0 ? "solid" : "liquid";
+
+            Console.WriteLine("State of mater is {0}", stateOfMatter);
+            Console.ReadKey();
+
+            temperature += 30;
+
+
+
         }
 
 
