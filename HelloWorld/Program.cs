@@ -4,25 +4,22 @@ using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Channels;
 
-namespace DoWhile
+namespace While
 {
     class Program {
 
         
         static void Main(string[] args)
         {
-            int lenghtOfText = 0;
-            string wholeText = " ";
-            do
+            int counter = 0;
+            string enteredText = "";
+            while (enteredText.Equals(""))
             {
-                Console.WriteLine("Please enter the name of friend");
-                string nameOfAFriend = Console.ReadLine();
-                int currentLenght = nameOfAFriend.Length;
-                lenghtOfText += currentLenght;
-                wholeText += nameOfAFriend;
-            } while (lenghtOfText < 20);
-                Console.WriteLine("Thenks, that was enough! " + wholeText);
-
+                Console.WriteLine("please Press enter");
+                enteredText = Console.ReadLine();
+                counter++;
+                Console.WriteLine("Current people count is {0}", counter);
+            }
 
 
 
